@@ -22,7 +22,7 @@
         <ul class="nav-header-item">
             <li> <a href="./index.html" class="nav-header current">Студия
              
-            </a> </li>
+            </a> <span class="header-line current"> </span> </li>
             <li> <a href="./portfolio.html" class="nav-header">Портфолио</a> </li>
             <li> <a href="#" class="nav-header">Контакты</a> </li>
         </ul>
@@ -44,7 +44,23 @@
        <section class="section-hero">
          <div class="container">
           <h1 class="titel"> Эффективные решения<br>для вашего бизнеса</h1>        
-       <button class="button-title" type="button">Заказать услугу</button>
+       <button data-modal-open class="button-title" type="button">Заказать услугу</button>
+      
+    <div class="backdrop"  data-modal>
+       <div class="is-hidden" data-modal>
+          <div class="modal">
+            <p></p>
+            <button data-modal-close class="button-close-hero"> <svg class="button-close" aria-hidden="true" width="11" height="11">
+              <use href="./images/symbol-defs-close.svg#icon-vector"></use>
+            </svg> </button>
+  
+          </div>
+
+        </div>
+    </div>
+
+
+
       </div>
          
        </section>
@@ -88,9 +104,15 @@
          <h2 class="section-work work-section">Чем мы занимаемся</h2>
        
            <ul class="section-work-imeages">
-          <li ><img src="./images/box1.jpg" alt="Человек набирает текст на клавиатуре" width="370" height="294"></li>
-          <li ><img src="./images/box2.jpg" alt="Человек с телефоном у ноутбука" width="370" height="294"></li>
-          <li ><img src="./images/box3.jpg" alt="Человек с планшетом " width="370" height="294"></li>
+          <li class="work-section-item"><img src="./images/box1.jpg" alt="Человек набирает текст на клавиатуре" width="370" height="294">
+          <span class="work-section-name">Десктопные приложения</span>
+          </li>
+          <li class="work-section-item"><img src="./images/box2.jpg" alt="Человек с телефоном у ноутбука" width="370" height="294">
+          <span class="work-section-name">Мобильные приложения</span>
+          </li>
+          <li class="work-section-item"><img src="./images/box3.jpg" alt="Человек с планшетом " width="370" height="294">
+          <span class="work-section-name">Дизайнерские решения</span>
+          </li>
         </ul>
       </div>
            
@@ -279,5 +301,6 @@
     </div>
 
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

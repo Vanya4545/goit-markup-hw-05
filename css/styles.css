@@ -50,7 +50,7 @@ color: var(--logo-blue);
 }
 
 .titel {
-     /* background-color: #2f303a;*/
+    
     color: var(--logo-white);
     font-weight: 900;
     font-size: 44px;
@@ -61,6 +61,7 @@ color: var(--logo-blue);
 }
 
 .section-hero {
+   
     max-width: 1600px;
     margin: 0 auto;
          padding-top: 200px;
@@ -80,6 +81,7 @@ color: var(--logo-blue);
 
 
 .button-title {
+   
     border: 0;
     padding: 10px 30px;
     border-radius: 4px;
@@ -92,9 +94,81 @@ color: var(--logo-blue);
         letter-spacing: 0.06em;
         color: var(--logo-white);
     background-color: var(--logo-blue);
+
 }
 
+
+
+
+
+
+
+
+.backdrop.is-hidden {
+visibility: hidden;
+opacity: 0;
+pointer-events: none;
+}
+.backdrop {
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 20;
+}
+
+.is-hidden {
+    position: absolute;
+        
+    top: 221px;
+    
+    left: 536px;
+    width:528px;
+    height: 581px;
+    background-color: var(--logo-white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(0.75);
+    
+  
+}
+.is-hidden:nth-child(1) {
+   
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.button-close-hero {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        background-color: var(--logo-white);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+   
+}
+
+.button-close {
+   
+    fill: var(--logo-black);
+}
+
+
+
+
+
 .border-header {
+    
     border-bottom: 1px solid var(--button-border);
 }
 .header-flex {
@@ -116,6 +190,41 @@ align-items: center;
           
 }
 
+
+.header-line {
+        position: relative;                         
+        cursor: pointer;
+        line-height: 1;
+ }
+
+
+.header-line::after {
+        display: block;
+        position: absolute;
+        width: 48px;      
+        height: 4px;      
+        background-color: var(--logo-blue);       
+        border-radius: 2px;
+        content: "";
+       bottom: -1px;
+    }
+.header-line-portfolio {
+    position: relative;
+        cursor: pointer;
+        line-height: 1;
+
+}
+.header-line-portfolio::after {
+    display: block;
+    position: absolute;
+    width: 78px;
+    height: 4px;
+    background-color: var(--logo-blue);
+    border-radius: 2px;
+    content: "";
+    bottom: -1px;
+}
+
 .nav-header-contacts {
     display: flex;
     gap: 50px;
@@ -133,6 +242,7 @@ align-items: center;
     letter-spacing: 0.02em;
     color: var(--nav-header);
    
+   
    }
      
    .current {
@@ -143,7 +253,6 @@ align-items: center;
        color: var(--logo-blue);
    }
   
-
      
  
 
@@ -269,6 +378,34 @@ display: flex;
 justify-content: space-between;
 margin-top: 50px;
 
+}
+.work-section-item {
+    position: relative;
+    z-index: 10;
+}
+.work-section-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+
+   width: 370px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+       
+    
+        background: rgba(47, 48, 58, 0.8);
+
+    font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+       color: var(--logo-white);
+    z-index: 10;
 }
 .section-work-imeages-comand {
     background-color: var(--logo-white);
@@ -570,6 +707,51 @@ flex-wrap: wrap;
         margin-top: 4px;
        
 }
+
+.box-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.box-overlay:hover .overlay {
+    transform: translatex(0);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);;
+
+    transform: translatey(100%);
+    transition: transform 250ms ease;
+}
+.overlay > p {
+   
+    padding: 10px;
+    margin: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+
+    letter-spacing: 0.03em;
+
+    color: var(--logo-white);  
+}
+
+.overlay code {
+    
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #2a2a2a;
+}
+
+
 .portfolio-box-shadow:hover,
 .portfolio-box-shadow:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
@@ -601,6 +783,7 @@ address {
 /*container*/
 
 .container {
+  
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
